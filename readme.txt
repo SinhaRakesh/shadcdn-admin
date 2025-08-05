@@ -102,3 +102,37 @@ API Integration	✅ React Query	Ideal for CRUD/data
 Auth & ACL	✅ JWT + ACL	Decoupled, clean implementation
 UI/UX Design	✅ shadcn/ui	Modern, Tailwind-based
 Multi-tenant Scalability	✅ Built-in	Just pass tenant info in JWT or API
+
+
+
+🔧 Project Stack & Architecture
+| Concern                  | Tool / Library                  | Notes                                             |
+| ------------------------ | ------------------------------- | ------------------------------------------------- |
+| **Frontend**             | `Next.js`                       | Fast, file-based routing, SSR support             |
+| **UI Framework**         | `shadcn/ui` + `Tailwind CSS`    | Modern components, customizable, accessible       |
+| **State Management**     | `Zustand` + `persist`           | Auth, global UI state, minimal & scalable         |
+| **API Data Handling**    | `React Query (TanStack)`        | For all CRUD operations, caching, mutations       |
+| **Authentication**       | Custom JWT (via Spring Boot)    | Backend issues and tokens handled by Java backend |
+| **OAuth Provider**       | Google Login (Spring backend)   | Frontend can receive token and hydrate Zustand    |
+| **Access Control (ACL)** | `useACL()` hook                 | Based on roles/permissions from token or API      |
+| **Routing Guards**       | `<AuthGuard />` component       | Blocks unauthorized routes                        |
+| **Multitenancy**         | JWT claim or API context        | Used to scope users and data                      |
+| **Internationalization** | `next-i18next`                  | For full i18n support with SSR and language files |
+| **HTTP Client**          | `Axios` with interceptor        | Token-based auth header injection                 |
+| **Form Validation**      | `react-hook-form` + `zod`       | Clean, scalable form validation                   |
+| **Testing** (optional)   | `Jest`, `React Testing Library` | Optional, for unit and integration tests          |
+
+
+
+📦 What More Can You Add (Optional but Scalable)
+
+| Feature/Concern          | Tool Suggestion           | Why Useful                              |
+| ------------------------ | ------------------------- | --------------------------------------- |
+| **Form Validation**      | `react-hook-form` + `zod` | Strong validation schema and UX         |
+| **Theme Support**        | `next-themes`             | Light/dark mode toggle, SaaS branding   |
+| **Email Integration**    | `resend.com` or `SMTP`    | Email invites, password reset           |
+| **Feature Flags**        | `unleash`, `split.io`     | For beta features, plan gating          |
+| **Monitoring & Logging** | `sentry.io`, `logtail`    | Debug production issues easily          |
+| **Analytics**            | `plausible`, `posthog`    | For tracking user behavior              |
+| **Notifications**        | `react-toastify`          | Clean toast/alert messaging             |
+| **License Enforcement**  | Custom logic              | For SaaS tenant plan-based restrictions |
