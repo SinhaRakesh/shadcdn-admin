@@ -31,7 +31,7 @@ This project is a **SaaS-ready Admin Panel** built with a scalable and modern fr
 
 ---
 
-## 📁 Suggested Project Structure
+## 📁 Project Structure
 
 <pre>
 src/
